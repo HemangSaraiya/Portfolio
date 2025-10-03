@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(https://wallpapercave.com/wp/wp7453677.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+nav{
+     width: 100%;
+    background-color: rgba(29, 122, 148, 0.5);
+    padding: 1rem 5%;
+    border-bottom: 1px solid rgb(46, 83, 83);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color:whitesmoke;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navlinks{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.navlinks li a{
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    transition: 0.2s;
+}
+.navlinks li a:hover{
+    color: rgb(130, 201, 204);
+    text-shadow: 0 0 10px rgb(36, 166, 246);
+    text-decoration: underline;
+} 
+.about{
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(11, 38, 158);
+}
+hr {
+    width: 50%;
+    max-width: 400px;
+    margin: 20px auto;
+    border: 0;
+    height: 1px;
+    background-color: white;
+}
+.intro{
+    font-size: 35px;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 40px;
+    margin-left:324px;
+    display: inline-block;
+}
+.intro span{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #b3e5fc
+    
+}
+.text{
+    width: 100%;
+    border-right: 5px solid ;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(60),
+    cursor .4s step-end infinite alternate ;
+}
+@keyframes cursor{
+    50% { border-color: transparent}
+}
+@keyframes typing{
+    from{
+        width: 0
+    }
+}
+.info{
+    font-size:25px;
+    margin-left: 50px;
+    margin-top:30px;
+    font-weight: 400;
+    text-shadow: 8px lightblue;
+}
+.skills{
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(11, 38, 158);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.s1{
+ font-size:25px;
+    margin-left: 100px;
+    margin-top:30px;
+    
+    font-weight: 400;
+}
+.s1 span{
+    color: #b3e5fc;
+}
+.projects{
+     font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(11, 38, 158);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.p1 {
+      background: #0b0d2f;
+      font-size: 20px;
+    width: 50%;
+      margin: 40px 0;
+     margin-left: 390px;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 2px rgb(254, 255, 255);
+      transition: transform 0.3s ease;
+    }
+    .p1:hover {
+    transform: translateY(-5px);
+}
+    .p2{
+        background: #0b0d2f;
+      font-size: 20px;
+    width: 50%;
+      margin: 40px 0;
+      margin-left: 390px;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 2px rgb(254, 255, 255);
+      transition: transform 0.3s ease;
+    }
+    .p2:hover {
+    transform: translateY(-5px);
+}
+
+
+    .contact{
+     font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(11, 38, 158);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.c1{
+ font-size:25px;
+    margin-left: 100px;
+    margin-top:30px;
+    font-weight: 400;
+   
+    padding: 25px;
+}
+.c1 span{
+    color: #b3e5fc;
+}
+footer {
+       background: #0b0d2f;
+    box-shadow:5px 5px 5px 5px white;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 110px;
+    }
+    .rotate-message {
+    display: none; 
+}
+
+/* 1. MOBILE PORTRAIT MODE BLOCKER 📵
+  - Hide all content and show the rotation message when a small screen (<= 900px) is in portrait. 
+*/
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    /* Hide all primary elements of the page except the rotate message */
+    body > *:not(.rotate-message) {
+        display: none !important;
+    }
+
+    /* Show and center the rotate message */
+    .rotate-message {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0b0d2f; 
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 20px;
+        z-index: 9999;
+    }
+    .rotate-message p {
+        margin: 10px 0;
+    }
+    .rotate-icon {
+        font-size: 3em;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+
+    body {
+        background-size: 100% 100vh;
+    }
+    .rotate-message {
+        display: none !important;
+    }
+    .navlinks {
+        gap: 0.8rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .intro {
+        margin-left: 5%; 
+        font-size: 20px;
+        text-align: left;
+    }
+    .info, .s1, .c1 {
+        margin-left: 5%; 
+        font-size: 18px;
+    }
+    .p1, .p2 {
+        width: 90%; 
+        margin-left: 5%; 
+        margin-right: 5%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    body > *:not(.rotate-message) {
+        display: block; 
+    }
+}
